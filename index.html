@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- FORM -->
+    <div class="form-box">
+
+        <h2>Student Details</h2>
+
+        <div class="input-box">
+            <label>Student Name</label>
+            <input type="text" id="name" placeholder="Enter Name">
+            <small id="nameError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Student ID</label>
+            <input type="text" id="studentId" placeholder="24AIFT0000001">
+            <small id="studentIdError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Course ID</label>
+            <input type="text" id="courseId" placeholder="23UITPCL3508">
+            <small id="courseIdError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Department</label>
+            <select id="department">
+                <option value="">Select Department</option>
+                <option>Information Technology</option>
+                <option>Computer Engineering</option>
+                <option>AIML</option>
+                <option>AIDS</option>
+            </select>
+            <small id="departmentError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Course</label>
+            <input type="text" id="course" placeholder="Web Technology">
+            <small id="courseError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Batch</label>
+            <input type="text" id="batch" placeholder="2024-2028">
+            <small id="batchError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Blood Group</label>
+            <select id="blood">
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+            <small id="bloodError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>College Email</label>
+            <input type="email"
+                   id="email"
+                   placeholder="student@ghrcemp.raisoni.net">
+            <small id="emailError"></small>
+        </div>
+
+        <div class="input-box">
+            <label>Phone Number</label>
+            <input type="text"
+                   id="phone"
+                   maxlength="10"
+                   placeholder="9876543210">
+            <small id="phoneError"></small>
+        </div>
+
+        <div class="buttons">
+            <button id="generateBtn">Generate ID Card</button>
+            <button id="resetBtn" type="button">Reset</button>
+        </div>
+
+    </div>
+
+    <!-- ID CARD -->
+
+    <div class="card-container">
+
+        <div class="id-card" id="idCard">
+
+            <!-- FRONT -->
+
+            <div class="front">
+
+                <div class="header">
+                    <h3>GH Raisoni College of Engineering & Management</h3>
+                    <p>Pune</p>
+                </div>
+
+                <div class="avatar">
+                    👤
+                </div>
+
+                <h2 id="cardName">Student Name</h2>
+
+                <table>
+
+                    <tr>
+                        <td>Student ID</td>
+                        <td id="cardStudentId">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Course ID</td>
+                        <td id="cardCourseId">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Department</td>
+                        <td id="cardDepartment">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Course</td>
+                        <td id="cardCourse">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Batch</td>
+                        <td id="cardBatch">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Blood</td>
+                        <td id="cardBlood">-</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <!-- BACK -->
+
+            <div class="back">
+
+                <div class="strip"></div>
+
+                <h3>Student Information</h3>
+
+                <p id="cardEmail"></p>
+
+                <p id="cardPhone"></p>
+
+                <div class="barcode"></div>
+
+                <p id="barcodeText"></p>
+
+                <small>
+                    This card is the property of
+                    GHRCEM Pune.
+                </small>
+
+            </div>
+
+        </div>
+
+        <button id="flipBtn">
+            Flip Card
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
